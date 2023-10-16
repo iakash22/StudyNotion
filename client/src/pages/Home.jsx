@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import HighlightText from '../components/core/homepage/HighlightText';
-import Button from '../components/core/homepage/Button';
+import Button from '../components/common/Button';
 import Banner from '../assets/Images/banner.mp4';
 import CodeBlocks from '../components/core/homepage/CodeBlocks';
 import Tab from '../components/core/homepage/Tab';

@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './Button'
+import Button from '../../common/Button'
 import { TypeAnimation } from 'react-type-animation';
 
 const CodeBlocks = ({ position, headingText, paraText, btnText1, btntext2, codeBlocks,codeColor,codeblur }) => {

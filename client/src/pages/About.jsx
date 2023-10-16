@@ -1,11 +1,28 @@
-import React from 'react'
-import {TbLoader3} from 'react-icons/tb';
+import React from 'react';
+import BannerSection from '../components/core/aboutPage/BannerSection';
+import TextSection from '../components/core/aboutPage/TextSection';
+import StorySection from '../components/core/aboutPage/StorySection';
+import InfoSection from '../components/core/aboutPage/InfoSection';
+import LearningSection from '../components/core/aboutPage/LearningSection';
+import Footer from '../components/common/Footer';
 
 const About = () => {
     return (
-        <div className='text-4xl my-auto gap-5 font-bold flex items-center flex-col'>
-            About under maintance
-            <TbLoader3 className='animate-spin text-blue-300 text-8xl' />
+        <div className=''>
+            <BannerSection />
+            <TextSection />
+            <StorySection />
+            <InfoSection />
+            <LearningSection />
+            <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+                {/* Reviws from Other Learner */}
+                <h1 className="text-center text-4xl font-semibold mt-8">
+                    Reviews from other learners
+                </h1>
+                {/* <ReviewSlider /> */}
+            </div>
+
+            <Footer />
         </div>
     )
 }

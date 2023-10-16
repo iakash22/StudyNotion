@@ -4,7 +4,7 @@ import { BsArrowLeft } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { resetPassword } from '../services/operations/authApi';
-import Button from '../components/core/homepage/Button';
+import Button from '../components/common/Button';
 import { TypeAnimation } from 'react-type-animation';
 
 const UpdatePassword = () => {

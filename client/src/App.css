@@ -7,37 +7,39 @@ body {
     overflow-x: hidden;
 }
 
-.code-border{
-    background: linear-gradient(111.93deg,rgba(14,26,45,.24) -1.4%,rgba(17,30,50,.38) 104.96%);
+.code-border {
+    background: linear-gradient(111.93deg, rgba(14, 26, 45, .24) -1.4%, rgba(17, 30, 50, .38) 104.96%);
     border: 2px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(to right bottom,#ffffff38,#ffffff00);
+    border-image-source: linear-gradient(to right bottom, #ffffff38, #ffffff00);
 }
-.code-block1, .code-block2{
+
+.code-block1,
+.code-block2 {
     border-radius: 100%;
     filter: blur(34px);
     height: 257.05px;
     left: calc(50% - 263.005px);
     opacity: .2;
     top: calc(50% - 175.995px);
-    transform: matrix(1,0,-.03,1,0,0);
+    transform: matrix(1, 0, -.03, 1, 0, 0);
     width: 372.95px;
 }
 
 .code-block1 {
-    background: linear-gradient(123.77deg,#8a2be2 -6.46%,orange 59.04%,#f8f8ff 124.53%)
+    background: linear-gradient(123.77deg, #8a2be2 -6.46%, orange 59.04%, #f8f8ff 124.53%)
 }
 
-.code-block2{
-    background: linear-gradient(118.19deg,#1fa2ff -3.62%,#12d8fa 50.44%,#a6ffcb 104.51%);
+.code-block2 {
+    background: linear-gradient(118.19deg, #1fa2ff -3.62%, #12d8fa 50.44%, #a6ffcb 104.51%);
 }
 
-.bgHome { 
+.bgHome {
     background-image: url('./assets/Images/bghome.svg');
 }
 
 
-.dropbox::after{
+.dropbox::after {
     z-index: 100;
     position: absolute;
     content: 'Under maintance';
@@ -56,16 +58,29 @@ body {
     justify-content: center;
     text-align: center;
 }
-.dropbox:hover::after{
+
+.dropbox:hover::after {
     display: flex;
 }
 
-:root{
+:root {
     --tw-ring-offset-shadow: 0 0 #0000;
     --tw-ring-shadow: 0 0 #0000;
-    --tw-shadow : 0 1px 0 0 rgba(255,255,255,0.5);
+    --tw-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
 
-.form-shadow{
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)
+.form-shadow {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.lable-style {
+    @apply text-[14px] text-richblack-5;
+}
+
+.form-style {
+    @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+}
+
+.error-style{
+    @apply -mt-1 text-xs text-yellow-50
 }
