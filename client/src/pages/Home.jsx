@@ -13,6 +13,7 @@ import LearningLanguageSection from '../components/core/homepage/LearningLanguag
 import Instructor from '../assets/Images/Instructor.png';
 import Footer from '../components/common/Footer';
 import {FiLoader} from 'react-icons/fi';
+import ReviewSliderSection from '../components/common/ReviewSliderSection';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <SectionOne />
             <SectionTwo />
             <SectionThree />
+            <ReviewSliderSection />
             <Footer />
         </div>
     )
@@ -253,19 +255,6 @@ const SectionThree = () => {
                         }
                         active={true}
                         toLink={"/signup"}
-                    />
-                </div>
-            </div>
-
-            <div className='text-center text-4xl mt-8 font-semibold'>
-                Reviews from other learners
-            </div>
-
-            <div className='tex-white'>
-                <div className='h-40 flex flex-col mt-3 items-center gap-5 text-richblack-600 text-3xl '>
-                    Under Maintenance
-                    <FiLoader 
-                        className='text-4xl text-blue-200 animate-spin duration-1000'
                     />
                 </div>
             </div>

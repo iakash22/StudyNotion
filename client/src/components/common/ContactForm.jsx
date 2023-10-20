@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import countryCode from '../../assets/data/countrycode.json';
+import {contactusEndpoint} from '../../services/Apis';
+import apiConnector from '../../services/apiConnector';
+import {FiLoader} from 'react-icons/fi'
 
 const initialData = {
     firstName: "",
     lastName: "",
     email: "",
     message: "",
-    phoneNo: "",
+    phoneNumber: "",
 };
 
 
 const ContactForm = () => {
-    const formStyle ="";
     const [loading, setLoading] = useState(false);
     const {
         register,
@@ -28,7 +30,17 @@ const ContactForm = () => {
     }, [reset, isSubmitSuccessful]);
 
     const onSubmit = async (data) => {
-        console.log("conatact data :", data);
+        // console.log("conatact data :", data);
+        setLoading(true);
+        try{
+            const result = await apiConnector('POST', contactusEndpoint.CONTACT_US_API, data);
+            console.log("contact us result :", result);
+        }catch(err){
+            console.log("ERROR MESSAGE from contact us - ", err.message)
+        }
+        // setTimeout(() => {
+            setLoading(false);
+        // },2000);
     }
 
     return (
@@ -134,9 +146,10 @@ const ContactForm = () => {
             <button
                 type='submit'
                 className='rounded-md bg-yellow-50 px-6 py-3 text-center text-[13px] font-bold text-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
-                            transition-all duration-200 hover:scale-95 hover:shadow-none  disabled:bg-richblack-500 sm:text-[16px] '
+                            transition-all duration-200 hover:scale-95 hover:shadow-none  disabled:bg-richblack-500 sm:text-[16px] flex items-center justify-center gap-1'
             >
-                Send Message
+                <span>{loading ? "Sending..." : "Send Message"}</span>
+                {loading && <FiLoader className='text-2xl text-richblack-500 animate-spin duration-1000'/>}
             </button>
         </form>
     )

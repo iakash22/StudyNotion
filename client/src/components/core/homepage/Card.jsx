@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {FaUserFriends} from 'react-icons/fa';
+import { ImTree } from "react-icons/im";
 
 const Card = ({ course, index, selectCourse, setSelectCourse }) => {
     const first = "shadow-[10px_10px] shadow-yellow-50 bg-white text-richblack-25"
@@ -25,7 +26,7 @@ const Card = ({ course, index, selectCourse, setSelectCourse }) => {
                     <span>{course.level}</span>
                 </div>
                 <div className='flex flex-row gap-2 items-center text-[16px]'>
-                    <FaUserFriends />
+                    <ImTree />
                     <span>{course.lessionNumber}</span>
                 </div>
             </div>
