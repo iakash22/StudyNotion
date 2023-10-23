@@ -55,6 +55,10 @@ const courseSchema = mongoose.Schema({
 		type: String,
 		enum: ["Draft", "Published"],
 	},
+    totalDuration : {
+        type : String,
+        required : true,
+    }
 });
 
 module.exports = mongoose.model('Course', courseSchema);
