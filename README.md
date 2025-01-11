@@ -34,6 +34,12 @@ StudyNotion aims to create an immersive learning experience through:
 ## Screenshots
 
 ![App Screenshot](./public/Homepage.png)
+<img src="./public/login.png" alt="AppScreenshot" width="600" height="400">
+<img src="./public/signup.png" alt="AppScreenshot" width="600" height="400">
+<img src="./public/profile.png" alt="AppScreenshot" width="600" height="400">
+<img src="./public/instructor-profile.png" alt="AppScreenshot" width="600" height="400">
+<img src="./public/settings.png" alt="AppScreenshot" width="600" height="400">
+<img src="./public/cart.png" alt="AppScreenshot" width="600" height="400">
 
 
 ## Features
