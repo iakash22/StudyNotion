@@ -4,7 +4,7 @@ const courseSchema = mongoose.Schema({
     courseName : {
         type : String,
     },
-    CourseDescription : {
+    courseDescription : {
         type : String,
     },
     instructor : {
@@ -57,7 +57,7 @@ const courseSchema = mongoose.Schema({
 	},
     totalDuration : {
         type : String,
-        required : true,
+        // required : true,
     }
 });
 

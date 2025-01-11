@@ -6,7 +6,7 @@ import RenderTotalAmount from './RenderTotalAmount';
 const index = () => {
     const { total, totalItems } = useSelector(state => state.cart);
     return (
-        <div className='mx-auto w-11/12 max-w-maxContent py-10'>
+        <>
             <h1 className='mb-14 text-3xl font-medium text-richblack-5'>Your Cart</h1>
             <p className="border-b border-b-richblack-400 pb-2 font-semibold text-richblack-400">
                 {totalItems} Courses in Cart
@@ -24,7 +24,7 @@ const index = () => {
                         </div>
                     )
             }
-        </div>
+        </>
     )
 }
 

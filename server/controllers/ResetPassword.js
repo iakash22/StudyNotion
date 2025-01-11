@@ -2,8 +2,9 @@ const User = require('../models/User');
 const emailSender = require('../utils/emailSender');
 const bcrypt = require('bcrypt');
 const crypto = require('crypto');
+require('dotenv').config();
 
-
+const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 exports.resetPasswordToken = async(req, res) => {
     try{
         const {email} = req.body;
@@ -30,7 +31,7 @@ exports.resetPasswordToken = async(req, res) => {
                                             resetPasswordExpires : Date.now() + 5*60*1000},
                                             {new:true}
                                             )
-        const url = `http://127.0.0.1:5173/update-password/${token}`;
+        const url = `${CLIENT_URL}/update-password/${token}`;
 
         const sendEmail = await emailSender( email,"Password Reset Link", `Your Link for email verification is ${url}. Please click this url to reset your password.`)
         console.log("Send mail while reset password", sendEmail);

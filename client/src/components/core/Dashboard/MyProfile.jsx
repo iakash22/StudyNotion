@@ -15,8 +15,8 @@ function MyProfile() {
     }
     const name = user?.firstName + " " + user?.lastName;
     return (
-        <div className='w-11/12 max-w-[1000px] mx-auto py-10'>
-            <h1 className='text-4xl font-medium mb-4 ring-richblack-5'>Edit Profile</h1>
+        <>
+            <h1 className='text-4xl font-medium mb-4 ring-richblack-5'>My Profile</h1>
             
             <div className='flex items-center justify-between bg-richblack-800 rounded-md border-[1px] 
                             border-richblack-700 p-8 px-12'>
@@ -105,7 +105,7 @@ function MyProfile() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

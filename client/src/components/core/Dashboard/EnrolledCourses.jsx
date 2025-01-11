@@ -22,7 +22,7 @@ const EnrolledCourses = () => {
         fetchEnrolledCourse();
     }, []);
     return (
-        <div className='mx-auto w-11/12 max-w-maxContent lg:max-w-[1000px] py-10'>
+        <>
             <div className='text-3xl text-richblack-50'>Enrolled Courses</div>
             {
                 !enrolledCourses ?
@@ -84,7 +84,7 @@ const EnrolledCourses = () => {
                             )
                     )
             }
-        </div>
+        </>
     )
 }
 

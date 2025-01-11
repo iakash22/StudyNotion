@@ -5,7 +5,7 @@ const {uploadImageCloudinary} = require('../utils/imageUploader');
 require('dotenv').config();
 
 exports.createCourse = async(req,res) => {
-    try{
+    try {
         const{ 
                 courseName,
                 courseDescription,
@@ -41,7 +41,7 @@ exports.createCourse = async(req,res) => {
             });
         }
 
-        console.log(instructorDetails);
+        // console.log(instructorDetails);
 
         const categoryDetails = await Category.findById(category);
 

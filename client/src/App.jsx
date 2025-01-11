@@ -20,6 +20,7 @@ import { useSelector } from 'react-redux'
 import { ACCOUNT_TYPE } from './utils/Constants'
 import EnrolledCourses from './components/core/Dashboard/EnrolledCourses'
 import Cart from './components/core/Dashboard/cart'
+import AddCourse from './components/core/Dashboard/AddCourse';
 
 function App() {
 
@@ -82,6 +83,11 @@ function App() {
               <>
                 <Route path='dashboard/enrolled-courses' element={<EnrolledCourses />} />
                 <Route path='dashboard/cart' element={<Cart/> } />
+              </>
+            )}
+            {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
+              <>
+                <Route path='dashboard/add-course' element={<AddCourse />} />
               </>
             )}
           </Route>
