@@ -35,17 +35,17 @@ StudyNotion aims to create an immersive learning experience through:
 
 ![App Screenshot](./public/Homepage.png)
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top : 10px;">
-    <img src="./public/login.png" alt="App Screenshot" width="400" height="300">
-    <img src="./public/signup.png" alt="App Screenshot" width="400" height="300">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; justify-content: space-between;">
+    <img src="./public/login.png" alt="App Screenshot" width="450" height="350">
+    <img src="./public/signup.png" alt="App Screenshot" width="450" height="350">
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top : 10px;">
-    <img src="./public/profile.png" alt="App Screenshot" width="400" height="300">
-    <img src="./public/instructor-profile.png" alt="App Screenshot" width="400" height="300">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; justify-content: space-between;">
+    <img src="./public/profile.png" alt="App Screenshot" width="450" height="350">
+    <img src="./public/instructor-profile.png" alt="App Screenshot" width="450" height="350">
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top : 10px;">
-    <img src="./public/settings.png" alt="App Screenshot" width="400" height="300">
-    <img src="./public/cart.png" alt="App Screenshot" width="400" height="300">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; justify-content: space-between;">
+    <img src="./public/settings.png" alt="App Screenshot" width="450" height="350">
+    <img src="./public/cart.png" alt="App Screenshot" width="450" height="350">
 </div>
 
 
