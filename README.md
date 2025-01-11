@@ -34,12 +34,19 @@ StudyNotion aims to create an immersive learning experience through:
 ## Screenshots
 
 ![App Screenshot](./public/Homepage.png)
-<img src="./public/login.png" alt="AppScreenshot" width="600" height="400">
-<img src="./public/signup.png" alt="AppScreenshot" width="600" height="400">
-<img src="./public/profile.png" alt="AppScreenshot" width="600" height="400">
-<img src="./public/instructor-profile.png" alt="AppScreenshot" width="600" height="400">
-<img src="./public/settings.png" alt="AppScreenshot" width="600" height="400">
-<img src="./public/cart.png" alt="AppScreenshot" width="600" height="400">
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top : 10px;">
+    <img src="./public/login.png" alt="App Screenshot" width="400" height="300">
+    <img src="./public/signup.png" alt="App Screenshot" width="400" height="300">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top : 10px;">
+    <img src="./public/profile.png" alt="App Screenshot" width="400" height="300">
+    <img src="./public/instructor-profile.png" alt="App Screenshot" width="400" height="300">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top : 10px;">
+    <img src="./public/settings.png" alt="App Screenshot" width="400" height="300">
+    <img src="./public/cart.png" alt="App Screenshot" width="400" height="300">
+</div>
 
 
 ## Features
