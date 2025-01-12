@@ -35,18 +35,18 @@ StudyNotion aims to create an immersive learning experience through:
 
 ![App Screenshot](./public/Homepage.png)
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+<!-- <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
     <img src="./public/login.png" alt="App Screenshot" width="500" height="400">
     <img src="./public/signup.png" alt="App Screenshot" width="500" height="400">
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+ <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
     <img src="./public/profile.png" alt="App Screenshot" width="500" height="400">
     <img src="./public/instructor-profile.png" alt="App Screenshot" width="500" height="400">
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
     <img src="./public/settings.png" alt="App Screenshot" width="500" height="400">
     <img src="./public/cart.png" alt="App Screenshot" width="500" height="400">
-</div>
+</div> -->
 
 
 ## Features
