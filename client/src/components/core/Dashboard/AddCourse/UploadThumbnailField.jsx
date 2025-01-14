@@ -20,7 +20,7 @@ const UploadThumbnailField = ({
     const { course } = useSelector((state) => state.course)
     const [selectedFile, setSelectedFile] = useState(null)
     const [previewSource, setPreviewSource] = useState(
-        viewData ? viewData : editData ? editData : ""
+        viewData ? viewData : editData !== null ? editData : ""
     )
 
     const inputRef = useRef(null);

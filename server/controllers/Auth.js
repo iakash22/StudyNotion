@@ -199,7 +199,7 @@ exports.login = async (req, res) => {
 
             // create JsonWebToken 
             const token = jwt.sign(payload, process.env.SECRET_KEY, {
-                expiresIn: '2h',
+                expiresIn: '12h',
             })
 
             user.token = token;

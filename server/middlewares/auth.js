@@ -4,9 +4,9 @@ require('dotenv').config();
 
 exports.auth = async (req, res, next) => {
     try {
-        const token = req.cookies.token
-            || req.body.token
-            || req.header("Authorisation").replace("Bearer ", "");
+        const token = req.cookies?.token
+            || req.body?.token
+            || req.header("Authorisation")?.replace("Bearer ", "");
             
             if (!token) {
                 return res.status(401).json({
@@ -14,7 +14,7 @@ exports.auth = async (req, res, next) => {
                     message: "Token is missing",
                 })
             }
-            
+        // console.log(token);
             try {
                 const decode = jwt.verify(token, process.env.SECRET_KEY);
                 console.log(decode);
@@ -25,6 +25,7 @@ exports.auth = async (req, res, next) => {
             return res.status(400).json({
                 success: false,
                 message: "token is Invalid",
+                error : err,
             });
         }
         next();

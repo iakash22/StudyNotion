@@ -4,9 +4,11 @@ const router = express.Router();
 // Course Controllers Import
 const {
     createCourse,
+    editCourse,
     getAllCourses,
     getCourseDetails,
     getEnrolledCourses,
+    getInstructorCourses,
 } = require("../controllers/Course");
 
 // Categories Controllers Import
@@ -40,13 +42,16 @@ const {
 // Importing Middlewares
 const { auth, isInstructor, isStudent, isAdmin } = require("../middlewares/auth")
 
+// Course routes 
+
 // Courses can Only be Created by Instructors
 router.post('/createCourse', auth, isInstructor, createCourse);
 
+// Edit Course routes
+router.post("/editCourse", auth, isInstructor, editCourse)
+
 // Get Enrolled Courses
 router.get("/getEnrolledCourses", auth, getEnrolledCourses)
-
-// router.post("/createCourse", auth, isInstructor, createCourse);
 
 //Add a Section to a Course
 router.post("/addSection", auth, isInstructor, createSection)
@@ -65,6 +70,9 @@ router.post("/deleteSubSection", auth, isInstructor, deleteSubSection)
 
 // Add a Sub Section to a Section
 router.post("/addSubSection", auth, isInstructor, createSubSection)
+
+// Get all Courses Under a Specific Instructor
+router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses)
 
 // Get all Registered Courses
 router.get("/getAllCourses", getAllCourses)

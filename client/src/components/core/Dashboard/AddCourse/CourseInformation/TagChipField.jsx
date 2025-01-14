@@ -5,7 +5,7 @@ import InputError from '../../../../common/InputError';
 
 const TagChipField = ({ name, label, register, errors, setValue, getValues, placeholder }) => {
     const [tags, setTags] = useState(getValues(name) || []);
-    const { editCourse } = useSelector(state => state.course);
+    const { editCourse, course } = useSelector(state => state.course);
 
 
     useEffect(() => {

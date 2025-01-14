@@ -9,8 +9,9 @@ import UploadThumbnailField from '../UploadThumbnailField';
 import TagChipField from './TagChipField';
 import InputError from '../../../../common/InputError';
 import { setCourse, setStep } from '../../../../../redux/slices/CourseSlice';
-import { MdNavigateBefore } from 'react-icons/md';
+import { MdNavigateNext } from 'react-icons/md';
 import { COURSE_STATUS } from '../../../../../utils/Constants';
+import toast from 'react-hot-toast';
 
 const CourseInformationForm = () => {
     const {
@@ -39,16 +40,18 @@ const CourseInformationForm = () => {
 
         if (editCourse) {
             setValue('courseTitle', course.courseName);
-            setValue('courseShortDesc', course.courseShortDesc);
+            setValue('courseShortDesc', course.courseDescription);
             setValue('coursePrice', course.price);
             setValue('courseTags', course.tag);
             setValue('courseBenefits', course.whatYouWillLearn);
             setValue('courseCategory', course.category);
-            setValue('courseRequirement', course.instructions);
+            setValue('courseRequirements', course.instructions);
             setValue('courseImage', course.thumbnail);
         }
-
+        // if (courseCategories.length < 1) {
+        // console.log("hello");
         getCategories();
+        // }
     }, [])
 
     const isFormUpdated = () => {
@@ -57,7 +60,7 @@ const CourseInformationForm = () => {
         if (
             currentValues.courseTitle !== course.courseName ||
             currentValues.courseShortDesc !== course.courseDescription ||
-            currentValues.coursePrice !== course.price ||
+            currentValues.coursePrice != course.price ||
             currentValues.courseTags.toString() !== course.tag.toString() ||
             currentValues.courseBenefits !== course.whatYouWillLearn ||
             currentValues.courseCategory._id !== course.category._id ||
@@ -65,9 +68,9 @@ const CourseInformationForm = () => {
             course.instructions.toString() ||
             currentValues.courseImage !== course.thumbnail
         ) {
-            return true
+            return true;
         }
-        return false
+        return false;
     }
 
     const onSubmit = async (data) => {
@@ -212,6 +215,7 @@ const CourseInformationForm = () => {
                     name="courseCategory"
                     id="courseCategory"
                     defaultValue=""
+                    // value={getValues('courseCategory')}
                     className='w-full form-style'
                     {...register('courseCategory', { required: true })}
                 >
@@ -224,7 +228,7 @@ const CourseInformationForm = () => {
                     {
                         !loading && courseCategories.map((category, index) => (
                             <option
-                                key={category._id}
+                                key={index}
                                 value={category._id}
                             >
                                 {category?.name}
@@ -252,6 +256,7 @@ const CourseInformationForm = () => {
                 errors={errors}
                 setValue={setValue}
                 getValues={getValues}
+                editData={editCourse ? course?.thumbnail : null}
             />
 
 
@@ -296,10 +301,9 @@ const CourseInformationForm = () => {
                 <IconButton
                     disabled={loading}
                     active={true}
-                >
-                    <MdNavigateBefore />
-                    <span>{!editCourse ? "Next" : "Save Changes"}</span>
-                </IconButton>
+                    text={!editCourse ? "Next" : "Save Changes"}
+                    icon={<MdNavigateNext />}
+                />
             </div>
 
         </form>
