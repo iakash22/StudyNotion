@@ -9,6 +9,8 @@ const {
     getCourseDetails,
     getEnrolledCourses,
     getInstructorCourses,
+    deleteCourse,
+    getFullCourseDetails,
 } = require("../controllers/Course");
 
 // Categories Controllers Import
@@ -72,13 +74,19 @@ router.post("/deleteSubSection", auth, isInstructor, deleteSubSection)
 router.post("/addSubSection", auth, isInstructor, createSubSection)
 
 // Get all Courses Under a Specific Instructor
-router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses)
+router.get("/getInstructorCourses", auth, isInstructor, getInstructorCourses);
 
 // Get all Registered Courses
-router.get("/getAllCourses", getAllCourses)
+router.get("/getAllCourses", getAllCourses);
+
+// Get Details for a Specific Courses
+router.post("/getFullCourseDetails", auth, getFullCourseDetails);
 
 // Get Details for a Specific Courses
 router.post("/getCourseDetails", getCourseDetails)
+
+// Delete a Course
+router.delete("/deleteCourse", deleteCourse)
 
 // Category can Only be Created by Admin
 router.post("/createCategory", auth, isAdmin, createCategory)
